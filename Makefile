@@ -1,4 +1,4 @@
-NAME = libft.a
+NAME = lib42.a
 
 SRC_DIR = . ft_printf ft_printf/chknpr gnl
 SRC = $(foreach dir, $(SRC_DIR), $(wildcard $(dir)/*.c))
