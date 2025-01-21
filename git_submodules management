@@ -1,0 +1,17 @@
+# Ajouter un submodule
+git submodule add https://github.com/some/library.git libs/library
+
+# Initialiser et cloner les submodules après un clone
+git submodule update --init --recursive
+
+# Mettre à jour un submodule
+git submodule update --remote libs/library
+
+# Synchroniser les submodules
+git submodule sync
+
+# Supprimer un submodule
+git rm --cached libs/library
+rm -rf libs/library
+git config --remove-section submodule.libs/library
+git commit -m "Removed submodule library"
