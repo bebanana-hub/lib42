@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:13:11 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/10 17:07:16 by vincent          ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

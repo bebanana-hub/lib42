@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_arr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:17:03 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/08 17:08:55 by vincent          ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
 void	ft_free_arr(void **arr, int rows)
 {

@@ -6,11 +6,11 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 18:05:40 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/10/21 19:42:38 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

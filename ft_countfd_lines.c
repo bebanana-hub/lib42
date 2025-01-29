@@ -6,11 +6,11 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:30:42 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/13 15:10:58 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
 int	ft_countfd_lines(int fd)
 {

@@ -6,13 +6,13 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:07:01 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/11/25 17:43:45 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "libft.h"
+#include "lib42.h"
 
 char	*ft_strchr(const char *str, int c)
 {

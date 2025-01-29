@@ -6,12 +6,12 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:01:07 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/11/13 15:38:56 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "gnl.h"
-#include "../libft.h"
+#include "../lib42.h"
 
 char	*ft_strjoin_gnl(char *s1, char *s2);
 size_t	ft_isnewl(char *gnl);

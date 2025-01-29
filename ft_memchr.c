@@ -6,12 +6,12 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:54:34 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/10/21 19:09:34 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
+#include "lib42.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

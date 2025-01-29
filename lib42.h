@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   lib42.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:47:25 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/13 16:58:37 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:41:13 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIB42_H
+# define LIB42_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -75,6 +75,6 @@ int		ft_count_occ(char *str, int c);
 void	ft_free_arr(void **map, int rows);
 int		ft_countfd_lines(int fd);
 int		ft_strclen(char *str, int c);
-void	ft_error(char *str);
+void	ft_error(const char *str);
 
 #endif

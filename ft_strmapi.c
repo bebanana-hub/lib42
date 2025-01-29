@@ -6,11 +6,11 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:14:17 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/10/21 18:46:58 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

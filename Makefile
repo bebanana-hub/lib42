@@ -26,38 +26,46 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 
 GNL_DIR = ./gnl
-GNL_LIB = $(GNL_DIR)/gnl.a
-
 PRINTF_DIR = ./ft_printf
-PRINTF_LIB = $(PRINTF_DIR)/printf.a
+
+GNL_OBJ_DIR = $(GNL_DIR)/$(OBJS_DIR)
+PRINTF_OBJ_DIR = $(PRINTF_DIR)/$(OBJS_DIR)
+GNL_OBJS = $(wildcard $(GNL_DIR)/$(OBJS_DIR)/*.o)
+PRINTF_OBJS = $(wildcard $(PRINTF_DIR)/$(OBJS_DIR)/*.o)
+PRINTF_OBJS_CHK = $(wildcard $(PRINTF_DIR)/$(OBJS_DIR)/chknpr/*.o)
+
 
 all: $(NAME)
 
+$(GNL_OBJ_DIR):
+	@echo "Compiling GNL objects..."
+	$(MAKE) -C $(GNL_DIR)
+
+$(PRINTF_OBJ_DIR):
+	@echo "Compiling FT_PRINTF objects..."
+	$(MAKE) -C $(PRINTF_DIR)
+
 $(OBJS_DIR):
-	mkdir -p $(OBJS_DIR)
+	@echo "mkdir -p"
+	@mkdir -p $(OBJS_DIR) 
 
-$(GNL_LIB):
-	@$(MAKE) -C $(GNL_DIR)
-
-$(PRINTF_LIB):
-	@$(MAKE) -C $(PRINTF_DIR)
-
-$(NAME): $(OBJS) $(PRINTF_LIB) $(GNL_LIB)
-	@$(AR) $@ $^
+$(NAME): $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS) $(PRINTF_OBJS_CHK) | $(PRINTF_OBJ_DIR) $(GNL_OBJ_DIR)
+	@echo "lib"
+	$(AR) $@ $^
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+	@echo "compiling"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 
 clean:
+	@echo "clean"
 	rm -fr $(OBJS_DIR)
 	@$(MAKE) -C $(GNL_DIR) clean
 	@$(MAKE) -C $(PRINTF_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
-	@$(MAKE) -C $(GNL_DIR) fclean
-	@$(MAKE) -C $(PRINTF_DIR) fclean
 
 re: fclean all
 

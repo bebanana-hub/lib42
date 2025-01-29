@@ -6,13 +6,13 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 14:00:35 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/11 15:22:49 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib42.h"
 
-void	ft_error(char *str)
+void	ft_error(const char *str)
 {
 	ft_printf("%s", str);
 }

@@ -6,12 +6,12 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:28:19 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/10/17 15:50:46 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "lib42.h"
 
 char	*ft_strnstr(const char *str, const char *find, size_t len)
 {

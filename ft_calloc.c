@@ -6,13 +6,13 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:46:35 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/10/21 18:41:34 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "libft.h"
+#include "lib42.h"
 
 void	*ft_calloc( size_t num, size_t size);
 
