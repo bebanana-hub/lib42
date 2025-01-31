@@ -1,5 +1,24 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/31 14:50:44 by vgalloni          #+#    #+#              #
+#    Updated: 2025/01/31 15:17:25 by vgalloni         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = lib42.a
 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+
+##############################################################################################################################
+##############################################################################################################################
+#* lib42 sources
 SRC = 	ft_atoi.c ft_bzero.c ft_calloc.c \
 		ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_isdigit.c ft_isprint.c ft_itoa.c \
@@ -16,53 +35,67 @@ SRC = 	ft_atoi.c ft_bzero.c ft_calloc.c \
 		ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 		ft_lstiter.c ft_lstlast.c ft_lstmap.c \
 		ft_lstnew.c ft_lstsize.c ft_putchar.c \
-		ft_putstr.c ft_strclen.c 
+		ft_putstr.c ft_strclen.c
 
+#* lib42 objects
 OBJS_DIR = obj
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRC:.c=.o))
 
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
+##############################################################################################################################
+#!	gnl
 
 GNL_DIR = ./gnl
-PRINTF_DIR = ./ft_printf
-
 GNL_OBJ_DIR = $(GNL_DIR)/$(OBJS_DIR)
+
+#*	gnl sources
+GNL_SRCS = $(GNL_DIR)/gnl.c $(GNL_DIR)/gnl_utils.c
+
+#*	gnl objects
+GNL_OBJS = $(addprefix $(GNL_DIR)/$(OBJS_DIR)/, $(notdir $(GNL_SRCS:.c=.o)))
+
+##############################################################################################################################
+#!	printf
+
+PRINTF_DIR = ./ft_printf
 PRINTF_OBJ_DIR = $(PRINTF_DIR)/$(OBJS_DIR)
-GNL_OBJS = $(wildcard $(GNL_DIR)/$(OBJS_DIR)/*.o)
-PRINTF_OBJS = $(wildcard $(PRINTF_DIR)/$(OBJS_DIR)/*.o)
-PRINTF_OBJS_CHK = $(wildcard $(PRINTF_DIR)/$(OBJS_DIR)/chknpr/*.o)
+
+#*	printf sources
+PRINTF_SRCS		= 	$(PRINTF_DIR)/ft_printf.c
+PRINTF_CHK_SRCS	=	$(PRINTF_DIR)/chknpr/ft_check.c $(PRINTF_DIR)/chknpr/ft_print_char.c \
+					$(PRINTF_DIR)/chknpr/ft_print_int.c $(PRINTF_DIR)/chknpr/ft_puthex.c
+
+#*	printf objects
+PRINTF_OBJS = $(addprefix $(PRINTF_DIR)/$(OBJS_DIR)/, $(notdir $(PRINTF_SRCS:.c=.o)))
+PRINTF_CHK_OBJS = $(addprefix $(PRINTF_DIR)/$(OBJS_DIR)/chknpr/, $(notdir $(PRINTF_CHK_SRCS:.c=.o)))
+
+##############################################################################################################################
+##############################################################################################################################
 
 
 all: $(NAME)
 
-$(GNL_OBJ_DIR):
+$(GNL_OBJS):
 	@echo "Compiling GNL objects..."
-	$(MAKE) -C $(GNL_DIR)
+	$(MAKE) -sC $(GNL_DIR)
 
-$(PRINTF_OBJ_DIR):
+$(PRINTF_OBJS):
 	@echo "Compiling FT_PRINTF objects..."
-	$(MAKE) -C $(PRINTF_DIR)
+	$(MAKE) -sC $(PRINTF_DIR)
 
 $(OBJS_DIR):
-	@echo "mkdir -p"
 	@mkdir -p $(OBJS_DIR) 
 
-$(NAME): $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS) $(PRINTF_OBJS_CHK) | $(PRINTF_OBJ_DIR) $(GNL_OBJ_DIR)
-	@echo "lib"
+$(NAME): $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS) $(PRINTF_CHK_OBJS)
 	$(AR) $@ $^
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
-	@echo "compiling"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 
 clean:
-	@echo "clean"
 	rm -fr $(OBJS_DIR)
-	@$(MAKE) -C $(GNL_DIR) clean
-	@$(MAKE) -C $(PRINTF_DIR) clean
+	@$(MAKE) -sC $(GNL_DIR) clean
+	@$(MAKE) -sC $(PRINTF_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
