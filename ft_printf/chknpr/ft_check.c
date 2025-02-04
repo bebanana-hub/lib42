@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 14:39:19 by vgalloni          #+#    #+#             */
-/*   Updated: 2024/11/27 14:39:24 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/02/04 15:58:55 by vincent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_spcheck(const char *format, va_list args);
 int	ft_spputstr(char *s);
 int	ft_spputnbr(int n);
-int	putchar(char c);
+int	ft_spputchar(char c);
 
 int	ft_spcheck(const char *format, va_list args)
 {
