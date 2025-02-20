@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 14:00:35 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/29 14:40:41 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/02/20 19:58:34 by vincent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_error(const char *str)
 {
-	ft_printf("%s", str);
+	ft_printf("%s\n", str);
 }
