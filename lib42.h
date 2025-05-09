@@ -6,7 +6,7 @@
 /*   By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:47:25 by vgalloni          #+#    #+#             */
-/*   Updated: 2025/01/29 14:41:13 by vgalloni         ###   ########.fr       */
+/*   Updated: 2025/05/09 18:59:16 by vgalloni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ void	ft_free_arr(void **map, int rows);
 int		ft_countfd_lines(int fd);
 int		ft_strclen(char *str, int c);
 void	ft_error(const char *str);
+char	*ft_strndup(const char *s, size_t n);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: vgalloni <vgalloni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/31 14:50:44 by vgalloni          #+#    #+#              #
-#    Updated: 2025/01/31 15:17:25 by vgalloni         ###   ########.fr        #
+#    Updated: 2025/05/09 18:59:02 by vgalloni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC = 	ft_atoi.c ft_bzero.c ft_calloc.c \
 		ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 		ft_lstiter.c ft_lstlast.c ft_lstmap.c \
 		ft_lstnew.c ft_lstsize.c ft_putchar.c \
-		ft_putstr.c ft_strclen.c
+		ft_putstr.c ft_strclen.c ft_strndup.c
 
 #* lib42 objects
 OBJS_DIR = obj
